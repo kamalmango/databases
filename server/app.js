@@ -4,7 +4,7 @@ var db = require('./db');
 // Middleware
 var morgan = require('morgan');
 var parser = require('body-parser');
-
+var urlencodedParser = parser.urlencoded({ extended: false });
 // Router
 var router = require('./routes.js');
 
@@ -22,8 +22,6 @@ app.use(parser.json());
 //app.use('/classes/users', router);
 
 app.use('/classes', router);
-
-
 
 // Serve the client files
 app.use(express.static(__dirname + '/../client'));

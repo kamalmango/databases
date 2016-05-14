@@ -30,7 +30,6 @@ User.sync()
   })
   .then(function() {
     // Retrieve objects from the database:
-    console.log(User.findAll({limit: 5}), '***********');
     return User.findAll({ limit: 5 });
   })
   .then(function(users) {
