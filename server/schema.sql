@@ -1,14 +1,16 @@
-CREATE DATABASE chat;
+CREATE DATABASE chatter;
 
-USE chat;
+USE chatter;
 
 CREATE TABLE messages (
   
-  ID int NOT NULL AUTO_INCREMENT,
+  id int NOT NULL AUTO_INCREMENT,
   username varchar(255) NOT NULL,
   text varchar(255) NOT NULL,
   roomname varchar(255) NOT NULL,
-  PRIMARY KEY (ID)
+  createdAt datetime NOT NULL,
+  updatedAt datetime NOT NULL,
+  PRIMARY KEY (id)
 
 );
 
